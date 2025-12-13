@@ -7,7 +7,7 @@
 - Challenges with the traditional approach
 - Terraform Workflow
 - Installing Terraform
-
+.
 ## Key Learning Points
 
 ### What is Infrastructure as Code?
