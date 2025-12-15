@@ -1,9 +1,9 @@
-resource "aws_vpc" "demo_vpc" {
+resource "aws_vpc" "main_vpc" {
   cidr_block = var.cidr_block
 
   tags = {
-    Name        = "${var.environment}-demo-vpc"
-    environment = "${local.perprod_env}-${var.environment}"
+    Name        = "${var.environment}-main-vpc"
+    environment = var.environment
   }
   
 }
