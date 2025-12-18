@@ -1,0 +1,2 @@
+sudo apt install graphviz
+terraform graph | dot -Tpng > graph.png

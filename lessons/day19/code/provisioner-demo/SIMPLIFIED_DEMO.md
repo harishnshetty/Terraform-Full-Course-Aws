@@ -32,6 +32,11 @@ terraform apply \
   -var='private_key_path=./terraform-demo-key.pem'
 ```
 
+terraform apply \
+  -var='key_name=new-keypair' \
+  -var='private_key_path=~/.ssh/new-keypair.pem'
+
+
 ### 5. Cleanup
 ```bash
 terraform destroy \
