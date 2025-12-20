@@ -32,3 +32,4 @@ lessons/day15/vpc-peering-demo-east.pem
 
 
 *.pem
+.venv
