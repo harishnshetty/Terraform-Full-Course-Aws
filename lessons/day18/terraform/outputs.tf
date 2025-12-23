@@ -22,3 +22,5 @@ output "upload_command_example" {
   description = "Example command to upload an image"
   value       = "aws s3 cp your-image.jpg s3://${aws_s3_bucket.upload_bucket.id}/"
 }
+
+#
