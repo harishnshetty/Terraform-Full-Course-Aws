@@ -34,7 +34,7 @@ resource "aws_iam_group_membership" "managers_members" {
   ]
 }
 
-# Add users to the Engineers group
+# Add users to the Engineers group 
 resource "aws_iam_group_membership" "engineers_members" {
   name  = "engineers-group-membership"
   group = aws_iam_group.engineers.name

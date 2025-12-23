@@ -30,7 +30,7 @@ resource "aws_iam_user" "users" {
   }
 }
 
-# Create IAM user login profile (password)
+# Create IAM user login profile (password) 
 resource "aws_iam_user_login_profile" "users" {
   for_each = aws_iam_user.users
 
