@@ -12,7 +12,7 @@ data "aws_availability_zones" "secondary" {
   state    = "available"
 }
 
-# Data source for Primary region AMI (Ubuntu 24.04 LTS)
+# Data source for Primary region AMI (Ubuntu 24.04 LTS)1
 data "aws_ami" "primary_ami" {
   provider    = aws.primary
   most_recent = true

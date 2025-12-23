@@ -1,4 +1,4 @@
-# VPC Peering Demo
+# VPC Peering Demo1
 # This demo creates two VPCs in different regions and establishes peering between them
 
 # Primary VPC in us-east-1

@@ -1,7 +1,7 @@
 # Variables for VPC Peering Demo
 
 variable "primary_region" {
-  description = "Primary AWS region for the first VPC"
+  description = "Primary AWS region for the first VPC1"
   type        = string
   default     = "us-east-1"
 }

@@ -1,4 +1,4 @@
-# Local values for VPC Peering Demo
+# Local values for VPC Peering Demo1
 
 locals {
   # User data template for Primary instance
