@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# AWS Config Recorder and Delivery Channel
+# AWS Config Recorder and Delivery Channel 
 # ------------------------------------------------------------------------------
 
 # AWS Config Recorder

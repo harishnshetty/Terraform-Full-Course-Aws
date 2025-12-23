@@ -1,4 +1,4 @@
-# S3 Bucket to store AWS Config history
+# S3 Bucket to store AWS Config history 
 resource "aws_s3_bucket" "config_bucket" {
   bucket        = "${var.project_name}-config-bucket-${random_string.suffix.result}"
   force_destroy = true

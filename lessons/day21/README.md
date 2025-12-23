@@ -1,5 +1,5 @@
 # Day 21: AWS Policy and Governance (Mini Project 7)
-
+ 
 This project demonstrates how to implement **AWS Policy Creation** and **Governance Setup** using Terraform. It showcases best practices for cloud security, compliance monitoring, and automated policy enforcement.
 
 ## 🎯 Project Objectives
