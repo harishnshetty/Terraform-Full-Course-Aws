@@ -26,7 +26,7 @@ resource "aws_elastic_beanstalk_environment" "green" {
   tier                = "WebServer"
   version_label       = aws_elastic_beanstalk_application_version.v2.name
 
-  # IAM Settings
+  # IAM Settings 
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
