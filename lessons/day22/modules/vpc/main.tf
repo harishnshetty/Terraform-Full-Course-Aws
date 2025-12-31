@@ -1,4 +1,4 @@
-# VPC Module - Main Configuration
+# VPC Module - Main Configuration 
 
 resource "aws_vpc" "main" {
   cidr_block           = var.vpc_cidr

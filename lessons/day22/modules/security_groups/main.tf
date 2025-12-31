@@ -1,6 +1,6 @@
 # Security Groups Module - Main Configuration
 
-# Web Server Security Group
+# Web Server Security Group 
 resource "aws_security_group" "web" {
   name        = "${var.project_name}-web-sg"
   description = "Security group for web server - allows HTTP and SSH"

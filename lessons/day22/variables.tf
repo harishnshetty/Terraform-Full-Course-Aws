@@ -1,7 +1,7 @@
 # Day 22 - RDS Database Mini Project
 # Variables Configuration
 
-# General Variables
+# General Variables 
 variable "project_name" {
   description = "Name of the project - used for tagging resources"
   type        = string

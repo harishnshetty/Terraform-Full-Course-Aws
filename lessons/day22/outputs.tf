@@ -7,7 +7,7 @@ output "vpc_id" {
   value       = module.vpc.vpc_id
 }
 
-# EC2 Outputs
+# EC2 Outputs 
 output "web_server_public_ip" {
   description = "Public IP address of the web server"
   value       = module.ec2.public_ip

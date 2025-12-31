@@ -1,6 +1,6 @@
 # EC2 Module - Main Configuration
 
-# Get latest Ubuntu AMI
+# Get latest Ubuntu AMI 
 data "aws_ami" "ubuntu" {
   most_recent = true
 
