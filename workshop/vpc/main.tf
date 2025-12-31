@@ -102,3 +102,4 @@ resource "aws_route" "nat-gw_rt" {
   depends_on = [aws_eip.main_eip]
 
 }
+

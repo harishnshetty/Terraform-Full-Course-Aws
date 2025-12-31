@@ -1,0 +1,1 @@
+git clone https://github.com/aws-samples/aws2tf.git
