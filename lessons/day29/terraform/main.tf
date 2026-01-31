@@ -39,7 +39,7 @@ module "eks" {
   version = "~> 20.0"
 
   cluster_name    = var.cluster_name
-  cluster_version = "1.30"
+  cluster_version = "1.34"
 
   cluster_endpoint_public_access = true
 
@@ -59,7 +59,7 @@ module "eks" {
     }
   }
 
-  enable_irsa = true
+  enable_irsa                              = true
   enable_cluster_creator_admin_permissions = true
 
   tags = {
@@ -117,11 +117,11 @@ data "http" "argocd_manifest" {
 }
 
 resource "kubectl_manifest" "argocd" {
-  for_each = { for doc in split("---", data.http.argocd_manifest.response_body) : 
-    sha256(doc) => doc if trimspace(doc) != "" 
+  for_each = { for doc in split("---", data.http.argocd_manifest.response_body) :
+    sha256(doc) => doc if trimspace(doc) != ""
   }
 
-  yaml_body = each.value
+  yaml_body          = each.value
   override_namespace = "argocd"
 
   depends_on = [kubernetes_namespace_v1.argocd]
