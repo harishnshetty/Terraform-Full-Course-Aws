@@ -54,6 +54,7 @@ resource "aws_internet_gateway" "main" {
   }
 }
 
+# Create one route table per private subnet for HA
 resource "aws_route_table" "private" {
   count  = var.private_subnet_count
   vpc_id = aws_vpc.main.id
@@ -62,6 +63,7 @@ resource "aws_route_table" "private" {
   }
 }
 
+# Route each private subnet's traffic through its corresponding NAT Gateway
 resource "aws_route" "private" {
   count                  = var.private_subnet_count
   route_table_id         = aws_route_table.private[count.index].id
@@ -69,12 +71,14 @@ resource "aws_route" "private" {
   nat_gateway_id         = aws_nat_gateway.main[count.index].id
 }
 
+# Associate each private subnet with its own route table
 resource "aws_route_table_association" "private" {
   count          = var.private_subnet_count
   subnet_id      = aws_subnet.private[count.index].id
   route_table_id = aws_route_table.private[count.index].id
 }
 
+# Create one NAT Gateway per Availability Zone
 resource "aws_nat_gateway" "main" {
   count         = var.private_subnet_count
   allocation_id = aws_eip.main[count.index].id
@@ -84,11 +88,14 @@ resource "aws_nat_gateway" "main" {
   }
 }
 
+# Create one Elastic IP per NAT Gateway
 resource "aws_eip" "main" {
-  count      = var.private_subnet_count
-  domain     = "vpc"
-  depends_on = [aws_internet_gateway.main]
+  count  = var.private_subnet_count
+  domain = "vpc"
+
   tags = {
     Name = "nat-eip-az-${count.index + 1}"
   }
+
+  depends_on = [aws_internet_gateway.main]
 }
